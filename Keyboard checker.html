@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Picker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<style>
+    *{
+        padding: 0;margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: beige;
+        color: black;
+    }
+
+    .container {  
+        margin: 100px auto;
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+   
+   td{
+    padding: 0px;
+    max-width: 6em;
+   }
+   .table{
+    padding: 0;
+   }
+    table,td{
+        padding: 0;
+    border: 1px solid black;
+    border-collapse: separate;
+    box-shadow: 2px -2px 4px #414141;
+ }
+ 
+  
+  
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">ApS Developer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Guess Number.html">Guess Game</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Project Menu
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="Mode Changer.html">Mode Switcher</a>
+                <a class="dropdown-item" href="Random Color Picker.html">Random Color Picker</a>
+                <a class="dropdown-item" href="Color switcher.html">Color Switcher</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="BMI Calculator.html">BMI Calculator</a>
+                <a class="dropdown-item" href="Guess Number.html">Guesses Number Game</a>
+                <a class="dropdown-item" href="Keyboard checker.html">Keyboard checker</a>
+              </div>
+               
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <h1>Keyboard Checker by Aps Developer </h1>
+        <p>Press any key to view magic.</p>
+        <div class="table">
+          
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+<script>
+    window.addEventListener('keydown',(e)=>{
+        document.querySelector('.table').innerHTML=`
+        <table>
+                <tr>
+                    <td>KeyPress</td>
+                    <td>KeyCode</td>
+                    <td>Code</td>
+                </tr>
+                <tr>
+                    <td id="keyPress">${e.key==" "? "space" : e.key}</td>
+                    <td id="keyCode">${e.keyCode}</td>
+                    <td id="Code">${e.code}</td>
+                </tr>
+            </table>`;
+         })
+
+</script>
+
+</html>
